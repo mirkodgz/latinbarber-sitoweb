@@ -54,7 +54,7 @@ export default function ServiziPage() {
                   </div>
                 </div>
                 <ul className="space-y-3">
-                  {pkg.features.map((feature, idx) => (
+                  {pkg.features.map((feature: string, idx: number) => (
                     <li key={idx} className="flex items-start gap-3 text-black/80 font-sans text-[15px] font-light leading-snug">
                       <span className="text-black text-[18px] leading-none">✓</span>
                       {feature}

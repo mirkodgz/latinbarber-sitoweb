@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --color-background: #000000;
+    --color-foreground: #ffffff;
+    --color-surface: #111111;
+    --color-muted: #888888;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center bg-accent px-8 py-3 font-heading text-lg font-bold uppercase tracking-wider text-black transition-all hover:bg-white hover:text-black;
+    }
+
+    .btn-outline {
+        @apply inline-flex items-center justify-center border border-white/20 bg-transparent px-8 py-3 font-heading text-lg font-bold uppercase tracking-wider text-white transition-all hover:bg-white hover:text-black;
+    }
+
+    .nav-link {
+        @apply relative font-heading text-[18px] uppercase tracking-normal text-white/80 transition-colors hover:text-white;
+    }
+
+    .nav-link.active {
+        @apply text-white;
+    }
+
+    .nav-link::after {
+        content: "";
+        @apply absolute -bottom-1 left-0 h-[1px] w-0 bg-accent transition-all duration-300;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        @apply w-full;
+    }
+
+    .btn-prenota {
+        @apply flex items-center gap-2 bg-accent px-5 py-2 font-heading text-[18px] font-normal tracking-wider text-black transition-all hover:bg-white;
+    }
+
+    .hero-title {
+        @apply font-heading text-[40px] md:text-[60px] uppercase leading-none text-white tracking-normal;
+    }
+
+    .hero-eyebrow {
+        @apply mb-4 font-heading text-[18px] md:text-[24px] font-normal uppercase tracking-normal text-white;
+    }
+
+    .text-body-refined {
+        @apply font-sans text-[16px] font-normal leading-[1.4em] tracking-[-0.03em];
+    }
+}

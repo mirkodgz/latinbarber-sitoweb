@@ -44,7 +44,7 @@ export default function GalleryPage() {
                         <iframe
                             src="https://api.leadconnectorhq.com/widget/booking/Hs0mC6fRg9AjA2saJUh3"
                             style={{ width: '100%', border: 'none', minHeight: '800px' }}
-                            scrolling="no"
+                            scrolling="yes"
                             id="Hs0mC6fRg9AjA2saJUh3_1767295423913"
                         />
                         <Script

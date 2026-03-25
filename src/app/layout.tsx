@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { bebasNeue, inter, staatliches } from "./fonts";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://latinbarberstudio.it"),
@@ -34,13 +32,15 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it">
+    <html lang="it" suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -48,13 +48,16 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${bebasNeue.variable} ${inter.variable} ${staatliches.variable} bg-background text-foreground antialiased`}
+        className={`${bebasNeue.variable} ${inter.variable} ${staatliches.variable} antialiased`}
       >
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1 pt-0">{children}</main>
-          <Footer />
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

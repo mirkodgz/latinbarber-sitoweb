@@ -1,26 +1,26 @@
 @import 'tailwindcss';
-@config "../../tailwind.config.ts";
+@import './app.css';
 
-/* --------------------------------- */
-/* ADMIN DASHBOARD THEME AND MODULES */
-/* --------------------------------- */
-@import './css/app.css';
-@import './css/layouts/container.css' layer(utilities);
-@import './css/layouts/sidebar.css' layer(utilities);
-@import './css/layouts/header.css' layer(utilities);
-@import './css/theme/default-colors.css' layer(utilities);
-@import './css/theme/dark-colors.css' layer(utilities);
-@import './css/override/reboot.css' layer(utilities);
+@import './layouts/container.css' layer(utilities);
+@import './layouts/sidebar.css' layer(utilities);
+@import './layouts/header.css' layer(utilities);
+@import './theme/default-colors.css' layer(utilities);
+@import './theme/dark-colors.css' layer(utilities);
+@import './override/reboot.css' layer(utilities);
 @import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
-html, main {
+html,
+main {
   scroll-behavior: smooth;
 }
 
 @theme {
+  
   --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --shadow-btn-shadow: rgba(0, 0, 0, 0.05) 0 9px 17.5px;
   --shadow-boxShadow: 7px 7px 10px rgba(0,0,0,.03);
@@ -79,6 +79,17 @@ html, main {
   --color-breadcrumbColor: var(--color-breadcrumbColor);
 }
 
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
 @utility form-control {
   & input {
     @apply border rounded-md border-defaultBorder bg-transparent ring-transparent dark:ring-transparent dark:bg-transparent w-full text-sm;
@@ -133,12 +144,17 @@ html, main {
   }
 
   /*heading text color*/
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-dark dark:text-white font-semibold;
   }
 
   input::placeholder {
-    @apply text-darklink dark:text-darklink;
+    @apply text-darklink dark:text-darklink
   }
 
   button {
@@ -152,7 +168,10 @@ html, main {
   .sales-overview select{
     @apply pr-9!;
   }
+
 }
+
+/*---break---*/
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -192,6 +211,9 @@ html, main {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+
+/*---break---*/
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -205,73 +227,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
+
+/* Hide in Firefox */
 input[type="time"] {
   -moz-appearance: textfield;
-}
-
-/* --------------------------------- */
-/* PUBLIC LANDING PAGE LEGACY ASSETS */
-/* --------------------------------- */
-.landing-theme {
-    --background: #000000;
-    --foreground: #ffffff;
-    --color-background: #000000;
-    --color-foreground: #ffffff;
-    --color-surface: #111111;
-    --color-muted: #888888;
-    --accent: #FFCA2E;
-    --primary: #FFCA2E;
-    --brand: #FFCA2E;
-    background-color: var(--background);
-    color: var(--foreground);
-}
-
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-}
-
-@layer components {
-    .btn-primary {
-        @apply inline-flex items-center justify-center bg-black px-8 py-3 font-heading text-lg font-bold uppercase tracking-wider text-white border border-white/20 transition-all hover:bg-white hover:text-black;
-    }
-
-    .btn-outline {
-        @apply inline-flex items-center justify-center border border-white/20 bg-transparent px-8 py-3 font-heading text-lg font-bold uppercase tracking-wider text-white transition-all hover:bg-white hover:text-black;
-    }
-
-    .nav-link {
-        @apply relative font-heading text-[18px] uppercase tracking-normal text-white/80 transition-colors hover:text-white;
-    }
-
-    .nav-link.active {
-        @apply text-white;
-    }
-
-    .nav-link::after {
-        content: "";
-        @apply absolute -bottom-1 left-0 h-[1px] w-0 bg-accent transition-all duration-300;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        @apply w-full;
-    }
-
-    .btn-prenota {
-        @apply flex items-center gap-2 bg-black px-5 py-2 font-heading text-[18px] font-normal tracking-wider text-white border border-white/20 transition-all hover:bg-white hover:text-black;
-    }
-
-    .hero-title {
-        @apply font-heading text-[40px] md:text-[60px] uppercase leading-none text-white tracking-normal;
-    }
-
-    .hero-eyebrow {
-        @apply mb-4 font-heading text-[18px] md:text-[24px] font-normal uppercase tracking-normal text-white;
-    }
-
-    .text-body-refined {
-        @apply font-sans text-[16px] font-normal leading-[1.4em] tracking-[-0.03em];
-    }
 }

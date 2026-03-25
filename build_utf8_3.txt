@@ -1,0 +1,70 @@
+﻿
+> latinbarber-site@0.1.0 build
+> next build
+
+node.exe : 
+[baseline-browser-mapping] 
+The data in this module is 
+over two months old.  To 
+ensure accurate Baseline 
+data, please update: `npm i b
+aseline-browser-mapping@lates
+t -D`
+En línea: 1 Carácter: 1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: ([baseli  
+  ne-brows...ping@latest -   
+ D`:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+   Ôû▓ Next.js 16.0.1 (Turbopack)
+   - Environments: .env.local
+
+ ÔÜá The "middleware" file 
+convention is deprecated. 
+Please use "proxy" instead. 
+Learn more: https://nextjs.or
+g/docs/messages/middleware-to
+-proxy
+   Creating an optimized production build ...
+[baseline-browser-mapping] 
+The data in this module is 
+over two months old.  To 
+ensure accurate Baseline 
+data, please update: `npm i b
+aseline-browser-mapping@lates
+t -D`
+[baseline-browser-mapping] 
+The data in this module is 
+over two months old.  To 
+ensure accurate Baseline 
+data, please update: `npm i b
+aseline-browser-mapping@lates
+t -D`
+(node:6516) [MODULE_TYPELESS_
+PACKAGE_JSON] Warning: 
+Module type of file:///D:/lat
+inbarber-sitoweb/tailwind.con
+fig.ts?id=1774465209165 is 
+not specified and it doesn't 
+parse as CommonJS.
+Reparsing as ES module 
+because module syntax was 
+detected. This incurs a 
+performance overhead.
+To eliminate this warning, 
+add "type": "module" to D:\la
+tinbarber-sitoweb\package.jso
+n.
+(Use `node --trace-warnings 
+...` to show where the 
+warning was created)

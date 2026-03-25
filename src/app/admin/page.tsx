@@ -6,6 +6,8 @@ import DailyActivity from "../components/dashboard/DailyActivity";
 import BlogCards from "../components/dashboard/BlogCards";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 const page = () => {
   return (
     <>

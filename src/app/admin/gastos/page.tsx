@@ -2,6 +2,7 @@ import { createClient as createServerClient } from '@/utils/supabase/server'
 import { createClient as createSupabaseCore } from '@supabase/supabase-js'
 import { redirect } from 'next/navigation'
 import GastosManager from './GastosManager'
+export const dynamic = 'force-dynamic';
 
 export default async function GastosPage() {
   const supabase = await createServerClient()

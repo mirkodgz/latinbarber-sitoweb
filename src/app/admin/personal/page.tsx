@@ -1,6 +1,7 @@
 import { createClient as createServerClient } from '@/utils/supabase/server'
 import { createClient as createSupabaseCore } from '@supabase/supabase-js'
 import PersonalManager from './PersonalManager'
+export const dynamic = 'force-dynamic';
 
 export default async function PersonalPage() {
   const supabase = await createServerClient()

@@ -2,6 +2,7 @@ import { createClient as createServerClient } from '@/utils/supabase/server'
 import { createClient as createSupabaseCore } from '@supabase/supabase-js'
 import { redirect } from 'next/navigation'
 import ProductosManager from './ProductosManager'
+export const dynamic = 'force-dynamic';
 
 export default async function ProductosPage() {
   const supabase = await createServerClient()

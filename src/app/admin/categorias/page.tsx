@@ -1,4 +1,5 @@
 import { createClient as createServerClient } from '@/utils/supabase/server'
+export const dynamic = "force-dynamic";
 import { createClient as createSupabaseCore } from '@supabase/supabase-js'
 import { redirect } from 'next/navigation'
 import CategoriasManager from './CategoriasManager'

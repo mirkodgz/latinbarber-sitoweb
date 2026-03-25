@@ -27,7 +27,7 @@ export default function Footer() {
                             />
                         </Link>
                         <p className="font-sans text-[15px] leading-relaxed text-white font-light text-center lg:text-left">
-                            Siamo orgogliosi di offrire un'esperienza unica ispirata allo stile e alla cultura dell'America Latina. Siamo una barberia latina che fonde tecniche tradizionali latine e moderne, evidenziando sempre calore, dedizione, uno stile inconfondibile e un'attenzione personalizzata.
+                            Siamo orgogliosi di offrire un&apos;esperienza unica ispirata allo stile e alla cultura dell&apos;America Latina. Siamo una barberia latina che fonde tecniche tradizionali latine e moderne, evidenziando sempre calore, dedizione, uno stile inconfondibile e un&apos;attenzione personalizzata.
                         </p>
                     </div>
 

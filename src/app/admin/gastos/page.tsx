@@ -39,9 +39,9 @@ export default async function GastosPage() {
   return (
     <div className="flex flex-col gap-4 animate-in fade-in duration-300 pt-2">
        <GastosManager 
-          gastos={(gastos as any) || []} 
-          barberos={barberos || []} 
-          productos={productos || []} 
+          gastos={(gastos as any[]) || []} 
+          barberos={(barberos as any[]) || []} 
+          productos={(productos as any[]) || []} 
           isAdmin={isAdmin}
        />
     </div>

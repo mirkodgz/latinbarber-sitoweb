@@ -410,7 +410,7 @@ export default function ProductosManager({ initialProducts, isAdmin, barberos, v
                   <TableRow>
                     <TableCell colSpan={6} className="text-center py-10 text-gray-500 text-lg">
                       No has registrado ventas todavía en tu negocio. 
-                      <br/><span className="text-sm font-normal">Haz clic en "Generar Venta Rápida" arriba para empezar a facturar.</span>
+                      <br/><span className="text-sm font-normal">Haz clic en &quot;Generar Venta Rápida&quot; arriba para empezar a facturar.</span>
                     </TableCell>
                   </TableRow>
                 )}

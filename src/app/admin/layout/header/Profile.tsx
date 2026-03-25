@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
@@ -28,15 +27,9 @@ const Profile = () => {
     <div className="relative group/menu">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <span className="h-10 w-10 hover:text-primary hover:bg-lightprimary rounded-full flex justify-center items-center cursor-pointer group-hover/menu:bg-lightprimary group-hover/menu:text-primary">
-            <Image
-              src="/images/profile/user-1.jpg"
-              alt="Profile"
-              height={35}
-              width={35}
-              className="rounded-full"
-            />
-          </span>
+          <div className="h-10 w-10 bg-black text-white rounded-full flex justify-center items-center cursor-pointer hover:bg-zinc-800 transition-colors shadow-sm">
+            <Icon icon="solar:user-circle-bold-duotone" width={28} height={28} />
+          </div>
         </DropdownMenuTrigger>
 
         <DropdownMenuContent

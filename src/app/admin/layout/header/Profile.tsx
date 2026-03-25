@@ -36,34 +36,12 @@ const Profile = () => {
           align="end"
           className="w-44 rounded-sm shadow-md p-2"
         >
-          <DropdownMenuItem asChild>
-            <Link
-              href="#"
-              className="px-3 py-2 flex items-center w-full gap-3 text-darkLink hover:bg-lightprimary hover:text-primary"
-            >
-              <Icon icon="solar:user-circle-outline" height={20} />
-              Mi Perfil
-            </Link>
-          </DropdownMenuItem>
-
-          <DropdownMenuItem asChild>
-            <Link
-              href="#"
-              className="px-3 py-2 flex items-center w-full gap-3 text-darkLink hover:bg-lightprimary hover:text-primary"
-            >
-              <Icon icon="solar:settings-outline" height={20} />
-              Mi Cuenta
-            </Link>
-          </DropdownMenuItem>
-
-          <DropdownMenuSeparator />
-
-          <div className="p-3 pt-2">
+          <div className="p-3">
             <Button
               onClick={handleLogout}
               variant="outline"
               size="sm"
-              className="w-full text-red-500 hover:text-red-600 hover:bg-red-50 border-red-100"
+              className="w-full text-red-500 hover:text-red-600 hover:bg-red-50 border-red-100 font-bold"
             >
               Cerrar Sesión
             </Button>
